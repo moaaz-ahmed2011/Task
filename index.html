@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskNest - Task Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light">
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1>Task-Nest</h1>
+    <div class="theme-buttons">
+      <img src="images/light.png" id="light-btn" width="50" height="50" alt="Light Mode" title="Light Mode">
+      <img src="images/dark.png" id="dark-btn" width="50" height="50" alt="Dark Mode" title="Dark Mode">
+    </div>
+  </div>
+
+  <div class="make-task">
+    <h2>MAKE YOUR TASK</h2>
+
+    <form id="task-form">
+      <div class="inputs-grid">
+        <input type="text" placeholder="Task Name" class="user" id="title" autocomplete="off">
+        <input type="text" placeholder="About" class="user" id="description" autocomplete="off">
+        <input type="date" class="user" id="dueDate">
+        <select class="user" id="priority">
+          <option value="">Priority</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+
+      <button type="submit" class="save-btn" id="save-btn">SAVE</button>
+    </form>
+  </div>
+
+  <div class="search-bar">
+    <input type="search" placeholder="Search tasks..." class="user" id="search">
+    <select class="filter" id="filterStatus">
+      <option value="All">All</option>
+      <option value="Pending">Pending</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+    </select>
+  </div>
+
+  <div class="tasks-container" id="tasks-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

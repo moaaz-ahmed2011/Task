@@ -1,0 +1,252 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body.light {
+background: linear-gradient(135deg, #6FB1E4 0%, #FFCC80 60%, #ee5533 100%); color: #000;
+}
+body.dark {
+background: linear-gradient(135deg, #000000 0%, #001F2F 50%, #00A6D6 100%); color: #fff;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  padding-bottom: 40px;
+  animation: fadeIn 1.2s ease forwards;
+}
+.navbar {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(50%);
+  width: 700px;
+  max-width: 1212px;
+  height: 80px;
+  margin: 25px auto 0;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.navbar h1 {
+  color: #000000;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.theme-buttons {
+  position: absolute;
+  right: 30px;
+  display: flex;
+  gap: 12px;
+}
+
+.make-task {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(30px);
+  width: 90%;
+  max-width: 1212px;
+  margin: 25px auto 0;
+  border-radius: 30px;
+  padding: 40px 50px;
+}
+.make-task h2 {
+  color: #000000;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+}
+
+.inputs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 40px;
+  margin-bottom: 40px;
+}
+.user {
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(60px);
+  width: 500px;
+  height: 55px;
+  border-radius: 30px;
+  border: none;
+  padding: 0 25px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.user::placeholder{
+  color: #000000;
+}
+
+.save-btn {
+  display: block;
+  margin: 0 auto;
+  background-color: #1da2b9;
+  color: #0B1013;
+  border: none;
+  border-radius: 25px;
+  width: 280px;
+  height: 52px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.search-bar {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(30px);
+  width: 90%;
+  max-width: 1212px;
+  height: 80px;
+  margin: 25px auto 0;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  gap: 20px;
+}
+.filter {
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(60px);
+  width: 220px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.tasks-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    width: 1110px;
+    max-width: 90%;
+    margin: 30px auto 0;
+    display: grid;
+    gap: 25px;
+    padding: 25px;
+    border-radius: 30px;
+}
+.task {
+  background:rgba(255,255,255,.02);
+  backdrop-filter:blur(30px);
+  border-radius: 30px;
+  padding: 22px 35px;
+  color: #000000;
+}
+
+.task.low {
+  border-left: 15px solid #22c55e;
+}
+
+.task.medium {
+  border-left: 15px solid #f59e0b;
+}
+
+.task.high {
+  border-left: 15px solid #ef4444;
+}
+
+.task h3 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.task p {
+  margin: 6px 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.task strong {
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.buttons button {
+  border: none;
+  border-radius: 20px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.buttons .edit {
+  background: #3b82f6;
+  color: white;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+
+.buttons .delete {
+  background: #ef4444;
+  color: white;
+  position: fixed;
+  top: 20px;
+  right: 110px;
+
+}
+
+
+.buttons .status-btn {
+  background: #323b42;
+  color: #46aaff;
+}
+
+
+.no-tasks {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 40px;
+  color: #000000;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .inputs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar, .make-task, .search-bar {
+    width: 95%;
+  }
+
+  .theme-buttons {
+    right: 15px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .search-input-wrapper,
+  .filter {
+    width: 100%;
+    max-width: none;
+  }
+}
