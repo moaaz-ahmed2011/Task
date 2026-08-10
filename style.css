@@ -4,10 +4,17 @@
   box-sizing: border-box;
 }
 body.light {
-background: linear-gradient(135deg, #6FB1E4 0%, #FFCC80 60%, #ee5533 100%); color: #000;
+background: linear-gradient(135deg, #a5a2a2 20%, #DD7777 50%); color: #000;
 }
 body.dark {
-background: linear-gradient(135deg, #000000 0%, #001F2F 50%, #00A6D6 100%); color: #fff;
+background: linear-gradient(
+  135deg,
+  #9c9b9b 0%,
+  #858585 35%,
+  #3f3f3f 55%,
+  #171717 75%,
+  #070707 100%
+);color: #fff;
 }
 
 body {
@@ -18,7 +25,7 @@ body {
 }
 .navbar {
   background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(50%);
+  backdrop-filter: blur(30px);
   width: 700px;
   max-width: 1212px;
   height: 80px;
@@ -161,7 +168,7 @@ body {
 }
 
 .task strong {
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .buttons {
